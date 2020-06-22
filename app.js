@@ -25,7 +25,9 @@ app.get("/posts", (req, res) => {
 
 // Connect to DB 
 mongoose.connect(
-  "mongodb+srv://Fortune:kaycodev20@cluster0-lmn2a.mongodb.net/NEM?retryWrites=true&w=majority",{ useNewUrlParse: true }, () => console.log('Connected to the DB')
+  "mongodb+srv://Fortune:kaycodev20@cluster0-lmn2a.mongodb.net/NEM?retryWrites=true&w=majority", 
+  { useNewUrlParse: true }, 
+    () => console.log('Connected to the DB!')
 );
 
 app.listen(4000);
