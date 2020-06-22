@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
+require('dotenv/config');
 
 const MongoClient = require("mongodb").MongoClient;
 const uri =
@@ -24,10 +25,8 @@ app.get("/posts", (req, res) => {
 });
 
 // Connect to DB 
-mongoose.connect(
-  "mongodb+srv://Fortune:kaycodev20@cluster0-lmn2a.mongodb.net/NEM?retryWrites=true&w=majority", 
-  { useNewUrlParse: true }, 
-    () => console.log('Connected to the DB!')
+mongoose.connect(process.env.DB_CONNECTION, { useNewUrlParse: true }, () =>
+  console.log("Connected to the DB!")
 );
 
 app.listen(4000);
