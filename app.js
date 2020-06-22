@@ -9,7 +9,7 @@ const postsRoute = require('./routes/posts');
 app.use('/posts', postsRoute);
 
 
-// MongoDB Clients code 
+// MongoDB Clients code
 const MongoClient = require("mongodb").MongoClient;
 const uri =
   "mongodb+srv://Fortune:kaycodev20@cluster0-lmn2a.mongodb.net/NEM?retryWrites=true&w=majority";
